@@ -309,21 +309,29 @@
             color: white;
         }
 
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
+        /*social media icons*/
+        .social-icons { display:flex; gap:12px; align-items:center; }
+        .social-icons .icon { display:inline-flex; align-items:center; justify-content:center; text-decoration:none; font-size:0; }
+        .social-icons svg {
+        width:28px; height:28px;
+        display:block;
+        fill:currentColor;   /* lets CSS control the color */
+        transition: transform .12s ease, opacity .12s ease;
+        }
+        .social-icons .icon:hover svg { transform: translateY(-2px); opacity:.9; }
+
+        /* brand colors (optional) */
+        .social-icons .facebook { color:#1877F2; }
+        .social-icons .instagram { color:#E1306C; }
+        .social-icons .twitter { color:#1DA1F2; }
+        .social-icons .youtube { color:#FF0000; }
+
+        /* visually-hidden for screen readers */
+        .sr-only {
+        position:absolute;
+        width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
         }
 
-        .social-icons a {
-            font-size: 1.5rem;
-            transition: opacity 0.3s;
-            text-decoration: none;
-        }
-
-        .social-icons a:hover {
-            opacity: 0.7;
-        }
 
         .footer-line {
             height: 1px;
@@ -950,12 +958,38 @@ body::after {
                         <li><a href="#newsletter">Newsletter</a></li>
                         <li><a href="#faq">FAQ</a></li>
                     </ul>
-                    <div class="social-icons">
-                        <a href="#facebook" aria-label="Facebook">📘</a>
-                        <a href="#instagram" aria-label="Instagram">📷</a>
-                        <a href="#twitter" aria-label="Twitter">🐦</a>
-                        <a href="#youtube" aria-label="YouTube">📹</a>
-                    </div>
+                    <!-- HTML -->
+            <div class="social-icons">
+            <a href="#facebook" class="icon facebook" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+                <path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07c0 4.99 3.66 9.14 8.44 9.92v-7.03H8.08v-2.89h2.36V9.41c0-2.34 1.4-3.63 3.54-3.63 1.03 0 2.1.18 2.1.18v2.31h-1.18c-1.16 0-1.52.72-1.52 1.46v1.75h2.59l-.41 2.89h-2.18v7.03C18.34 21.21 22 17.06 22 12.07z"/>
+                </svg>
+                <span class="sr-only">Facebook</span>
+            </a>
+
+            <a href="#instagram" class="icon instagram" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2A4.8 4.8 0 1 0 16.8 13 4.8 4.8 0 0 0 12 8.2zm6.4-2.9a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1z"/>
+                <circle cx="12" cy="12" r="3.2"/>
+                </svg>
+                <span class="sr-only">Instagram</span>
+            </a>
+
+            <a href="#twitter" class="icon twitter" aria-label="Twitter">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+                <path d="M22 5.92c-.66.3-1.36.5-2.09.59.75-.45 1.32-1.16 1.59-2.01-.7.42-1.49.73-2.32.9A3.98 3.98 0 0 0 12.1 9.5c0 .31.04.61.1.9-3.32-.17-6.27-1.76-8.24-4.19-.35.6-.56 1.3-.56 2.05 0 1.42.72 2.67 1.81 3.4-.67-.02-1.3-.2-1.85-.5v.05c0 1.98 1.41 3.63 3.29 4-.34.1-.7.15-1.08.15-.26 0-.51-.02-.76-.07.51 1.58 2 2.73 3.76 2.76A7.99 7.99 0 0 1 3 19.54 11.27 11.27 0 0 0 8.29 21c6.52 0 10.09-5.4 10.09-10.09v-.46c.7-.5 1.3-1.12 1.78-1.84-.64.28-1.32.47-2.03.56z"/>
+                </svg>
+                <span class="sr-only">Twitter</span>
+            </a>
+
+            <a href="#youtube" class="icon youtube" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
+                <path d="M23.5 6.2s-.24-1.7-.98-2.45A3.2 3.2 0 0 0 19.9 2.9C17.7 2.8 12 2.8 12 2.8s-5.7 0-7.9.1a3.2 3.2 0 0 0-2.6 1.85C1.9 4.5 1.7 6.2 1.7 6.2S1.5 8 1.5 9.8v2.4c0 1.8.2 3.6.2 3.6s.24 1.7.98 2.45a3.2 3.2 0 0 0 2.34 1.05c2.2.12 7.9.12 7.9.12s5.7 0 7.9-.12c.92-.05 1.74-.48 2.34-1.05.74-.75.98-2.45.98-2.45s.2-1.8.2-3.6V9.8c0-1.8-.2-3.6-.2-3.6zM9.5 15.3V8.7l6.2 3.3-6.2 3.3z"/>
+                </svg>
+                <span class="sr-only">YouTube</span>
+            </a>
+            </div>
+
                 </div>
             </div>
 
