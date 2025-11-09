@@ -6,6 +6,8 @@
     <title>Maroc Sahara - Royaume de Lumière</title>
     <link rel="stylesheet" href="style/map.css">
     <link rel="stylesheet" href="style/slider.css">
+    <link rel="stylesheet" href="style/video-section.css">
+    <!--style of header and footer-->
     <style>
         * {
             margin: 0;
@@ -515,9 +517,8 @@ body::after {
     <nav class="nav-container">
         <div class="nav-wrapper">
             <ul class="nav-menu nav-left">
-                <li><a href="#discover">DÉCOUVRIR LE MAROC</a></li>
-                <li><a href="#places">LIEUX À VISITER</a></li>
-                <li><a href="#see">VOIR & FAIRE</a></li>
+                <li><a href="#discover">Régions du Maroc</a></li>
+                <li><a href="#places">ONU Maroc</a></li>
             </ul>
             
             <div class="logo-center">
@@ -525,10 +526,8 @@ body::after {
             </div>
             
             <ul class="nav-menu nav-right">
-                <li><a href="#tours">CIRCUITS SUGGÉRÉS</a></li>
-                <li><a href="#info">INFOS VOYAGE</a></li>
-                <li><a href="#blog">BLOG</a></li>
-                <li class="search-icon">🔍</li>
+                <li><a href="#tours">Vidéo Sahara</a></li>
+                <li><a href="#info">Contact Nous</a></li>
             </ul>
         </div>
     </nav>
@@ -547,7 +546,7 @@ body::after {
             <h1 class="hero-title">MAROC SAHARA</h1>
             <h2 class="hero-subtitle">Royaume d’unité et de courage</h2>
             <p class="hero-tagline">Découvrez l’histoire du Sahara</p>
-            <a href="#discover" class=""><button class="button-89" role="button"> ▶ Voir la vidéo</button></a>
+            <a href="#videoWrapper" class=""><button class="button-89" role="button"> ▶ Voir la vidéo</button></a>
         </div>
     </section>
 
@@ -820,9 +819,9 @@ body::after {
     
     <!--slider section-->
     <br>
-     <h1 class= "section-title">
+    <h1 class= "section-title">
     Maroc-ONU
-</h1>
+    </h1>
     <section class="destinations-section">
         <div class="slider-container">
             <button class="slider-btn prev-btn" onclick="moveSlide(-1)">❮</button>
@@ -915,6 +914,87 @@ body::after {
         </div>
     </section>
 
+    <!--Video section-->
+    <div class="video-section">
+        <div class="description">
+            <h2>📖 À propos de cette vidéo</h2>
+            <p>
+                Dans cette vidéo spéciale, les stagiaires de l'OFPPT partagent leur fierté et leur amour pour le Maroc à travers un hommage à la Marche Verte et au Sahara Marocain. Un moment d'unité, de patriotisme et de reconnaissance envers l'histoire et les héros de notre nation.
+            </p>
+        </div>
+
+        <div class="video-wrapper" id="videoWrapper">
+            <video id="mainVideo" controls>
+                <source id="videoSource" src="OFPPTsahara.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+
+        <div class="description" style="margin-top: 30px;">
+            <h2>💚 Message patriotique</h2>
+            <p>
+                Cette production met en lumière la détermination et la fierté marocaine. La Marche Verte reste un symbole éternel de l'unité nationale et de la volonté du peuple marocain de protéger son intégrité territoriale. Le Sahara Marocain demeure une terre de fierté pour tous les Marocains.
+            </p>
+        </div>
+    </div>
+
+    <div class="credits">
+        <h3>✨ Crédits</h3>
+        <p><strong>🎥 Montage réalisé par :</strong> Ziad</p>
+        <p><strong>🎬 Production :</strong> Stagiaires de l'OFPPT</p>
+        <p style="font-size: 1.3em; margin-top: 15px; font-weight: bold;">💚 Vive le Maroc – الصحراء مغربية إلى الأبد 🇲🇦</p>
+        
+        <div class="hashtags">
+            <span>#MarcheVerte</span>
+            <span>#SaharaMarocain</span>
+            <span>#OFPPT</span>
+            <span>#FiertéMarocaine</span>
+            <span>#Ziad</span>
+            <span>#المسيرة_الخضراء</span>
+        </div>
+    </div>
+    <!--Thanks section-->
+    <section class="team-section" style="padding: 50px 30px; background: #f8f9fa; border-radius: 15px; margin-top: 50px; text-align: center;">
+    <h2 style="color: #006233; margin-bottom: 30px; font-size: 2em;">✨ Équipe du Projet</h2>
+    <p style="color: #333; font-size: 1.2em; margin-bottom: 40px;">
+        Merci à tous ceux qui ont contribué à la création de ce site dédié au Sahara et à la Marche Verte !
+    </p>
+    
+    <div class="team-members" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;">
+        <!-- Students -->
+        <div class="member" style="background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); min-width: 150px;">
+            <h3 style="color: #C1272D; margin-bottom: 10px;">ASSIA ELHARMOUCH</h3>
+            <p style="color: #006233;">Développement</p>
+        </div>
+        <div class="member" style="background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); min-width: 150px;">
+            <h3 style="color: #C1272D; margin-bottom: 10px;">ACHRAF BARGACH</h3>
+            <p style="color: #006233;">Développement</p>
+        </div>
+        <div class="member" style="background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); min-width: 150px;">
+            <h3 style="color: #C1272D; margin-bottom: 10px;">OUSSAMA ELKAIROUH</h3>
+            <p style="color: #006233;">Développement & Chef de projet</p>
+        </div>
+        <div class="member" style="background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); min-width: 150px;">
+            <h3 style="color: #C1272D; margin-bottom: 10px;">ZAYNAB LAABID</h3>
+            <p style="color: #006233;">Développement</p>
+        </div>
+        <div class="member" style="background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); min-width: 150px;">
+            <h3 style="color: #C1272D; margin-bottom: 10px;">ZIAD BENMASSOUD</h3>
+            <p style="color: #006233;">Montage &  Développement</p>
+        </div>
+
+        <!-- Teachers -->
+        <div class="member" style="background: #e6f2e6; padding: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); min-width: 150px;">
+            <h3 style="color: #C1272D; margin-bottom: 10px;">EL MOUTTAKI RAJAE</h3>
+            <p style="color: #006233;">Formatrice</p>
+        </div>
+        <div class="member" style="background: #e6f2e6; padding: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); min-width: 150px;">
+            <h3 style="color: #C1272D; margin-bottom: 10px;">RAIHANI ILHAM</h3>
+            <p style="color: #006233;">Formatrice</p>
+        </div>
+    </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -924,8 +1004,8 @@ body::after {
                         <img src="ofppt-logo.png" alt="OFPPT Logo">
                         <h3>MOROCCO</h3>
                     </div>
-                    <p class="footer-tagline">Royaume de Lumière</p>
-                    <p class="footer-description">Découvrez la magie du Maroc Sahara, où les traditions ancestrales rencontrent des paysages désertiques à couper le souffle.</p>
+                    <p class="footer-tagline">Fierté et Unité du Maroc</p>
+                    <p class="footer-description">Découvrez la beauté du Sahara marocain et l’esprit de la Marche Verte à travers le regard des stagiaires de l’OFPPT. Un hommage à notre histoire et à notre patrimoine</p>
                 </div>
 
                 <div class="footer-column">
@@ -940,14 +1020,15 @@ body::after {
                 </div>
 
                 <div class="footer-column">
-                    <h4>PLANIFIER VOTRE VOYAGE</h4>
+                    <h4>À DÉCOUVRIR</h4>
                     <ul class="footer-links">
-                        <li><a href="#tours">Circuits Suggérés</a></li>
-                        <li><a href="#travel-info">Informations Voyage</a></li>
-                        <li><a href="#visa">Exigences de Visa</a></li>
-                        <li><a href="#transport">Transport</a></li>
-                        <li><a href="#tips">Conseils de Voyage</a></li>
+                        <li><a href="#histoire">Histoire du Sahara</a></li>
+                        <li><a href="#marche-verte">Marche Verte</a></li>
+                        <li><a href="#projets-ofppt">Projets OFPPT</a></li>
+                        <li><a href="#culture">Culture Marocaine</a></li>
+                        <li><a href="#patrimoine">Patrimoine</a></li>
                     </ul>
+
                 </div>
 
                 <div class="footer-column">
@@ -1010,5 +1091,6 @@ body::after {
 
     <script src="script/map.js"></script>
     <script src="script/slider.js"></script>
+    <script src="script/video-section.js"></script>
 </body>
 </html>
